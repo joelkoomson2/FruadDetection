@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-main: #0a0a0a;
+  --blue-accent: #2563eb;
+  --blue-accent-hover: #1d4ed8;
+  --card-bg: #181c24;
+  --border-color: #222a36;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--background-main);
+}
+
+/* Ensure select dropdown options are visible in dark mode */
+select option {
+  background-color: #374151;
+  color: white;
+}
+
+select option:hover {
+  background-color: #4b5563;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-blue-accent {
+    background-color: var(--blue-accent);
+  }
+  .bg-blue-accent-hover:hover {
+    background-color: var(--blue-accent-hover);
+  }
+  .card-bg {
+    background-color: var(--card-bg);
+  }
+  .border-main {
+    border-color: var(--border-color);
+  }
+} 
